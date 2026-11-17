@@ -11,6 +11,13 @@ public class Lion extends Animal{
         System.out.println("Lew " + getNazwa() + " ryczy!");
 
     }
+    public void setGrzywa(boolean grzywa){
+        this.grzywa = grzywa;
+    }
+    public boolean getGrzywa(){
+        return grzywa;
+    }
+
 
 
 }

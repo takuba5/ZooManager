@@ -9,4 +9,11 @@ public class Penguin extends Animal{
     public void slide(){
         System.out.println("Pingwin " + getNazwa() + " slizga sie na brzuchu!");
     }
+
+    public void setGatunek(String gatunek){
+        this.gatunek = gatunek;
+    }
+    public  String getGatunek(){
+        return gatunek;
+    }
 }

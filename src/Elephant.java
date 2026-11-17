@@ -8,4 +8,13 @@ public class Elephant extends  Animal{
     public void trumpet(){
         System.out.println("Slon " + getNazwa() + " trabi!");
     }
+
+
+    public void setDlugosc_Traby(double dlugosc_Traby){
+        this.dlugosc_Traby = dlugosc_Traby;
+    }
+    public double getDlugosc_Traby(){
+        return dlugosc_Traby;
+    }
 }
+
