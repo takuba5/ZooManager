@@ -10,6 +10,9 @@ public class Main {
             zoo.dodajZwierze(animal);
         }
 
+        Menu menu = new Menu(zoo);
+        menu.start();
+
 
 
     }

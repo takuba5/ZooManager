@@ -121,4 +121,35 @@ public class Zoo {
         }
 
     }
+    public ArrayList<Animal> getAnimalsList() {
+        return animalsList;
+    }
+
+    public void wykonajCzynnosc(){
+        if (animalsList.isEmpty()) {
+            System.out.println("Nie ma zadnego zwierzecia w zoo!");
+            return;
+        }
+        Scanner scanner = new Scanner(System.in);
+
+        int index = 1;
+        for(Animal animal: animalsList){
+            System.out.println(index + ". " + animal.getNazwa() + " (" + animal.getClass().getSimpleName() + ")");
+        index++;
+        }
+        System.out.println("Wybierz zwierze:");
+        int wybor = scanner.nextInt();
+        if (wybor < 1 || wybor > animalsList.size()) {
+            System.out.println("Nieprawidlowy numer!");
+            return;
+        }
+        Animal animal = animalsList.get(wybor - 1);
+        if (animal instanceof Lion) {
+            ((Lion) animal).roar();
+        } else if (animal instanceof Penguin) {
+            ((Penguin) animal).slide();
+        } else if (animal instanceof Elephant) {
+            ((Elephant) animal).trumpet();
+        }
+    }
 }
